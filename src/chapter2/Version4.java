@@ -18,6 +18,8 @@ public class Version4 {
         filterApples(list, (Apple apple) -> {
             return apple.weight.intValue() > 150;
         });
+
+
     }
 
     public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate predicate) {
