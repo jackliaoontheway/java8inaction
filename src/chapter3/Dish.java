@@ -3,6 +3,8 @@ package chapter3;
 public class Dish {
     private String name;
     private double calories;
+    private boolean vegetarian;
+    private Type type;
 
     public String getName() {
         return name;

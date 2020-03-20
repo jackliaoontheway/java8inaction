@@ -14,7 +14,7 @@ public class Test1 {
     void processByJDK8() {
         List<String> lowCaloricDishesName = menu.stream()
                 .filter(d -> d.getCalories() < 400)
-                .sorted(comparing(Dish::getCalories))
+                .sorted(comparing(Dish::getCalories)) // comparing 是将 Dish::getCalories 转换成了 (a,b) -> a.getCalories().compare(b.getCalories);
                 .map(Dish::getName)
                 .collect(toList());
 
