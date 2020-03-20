@@ -23,6 +23,11 @@ public class Test1 {
                 .sorted(comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(toList());
+        menu.stream()
+                .filter(d -> d.getCalories() > 400)
+                .map(Dish::getName)
+                .limit(3)
+                .collect(toList());
     }
 
     void processByJDK7() {
