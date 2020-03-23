@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import static java.util.Comparator.*;
 import static java.util.stream.Collectors.*;
 
-public class TestChapter6 {
+public class TestReduce {
 
     public static void main(String[] args) {
         List<Transaction> data = buildData();
