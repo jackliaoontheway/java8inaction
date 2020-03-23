@@ -1,4 +1,4 @@
-package chapter4;
+package chapter5;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -124,74 +124,16 @@ public class TestPractice {
         Trader brian = new Trader("Brian", "Cambridge");
 
         return Arrays.asList(
-                new Transaction(brian, 2011, 300),
-                new Transaction(raoul, 2012, 1000),
-                new Transaction(raoul, 2011, 400),
-                new Transaction(mario, 2011, 710),
-                new Transaction(mario, 2012, 700),
-                new Transaction(alan, 2012, 950)
+                new Transaction(brian, 2011, "USD", 300),
+                new Transaction(raoul, 2012, "USD", 1000),
+                new Transaction(raoul, 2011, "USD", 400),
+                new Transaction(mario, 2011, "USD", 710),
+                new Transaction(mario, 2012, "CNY", 700),
+                new Transaction(alan, 2012, "CNY", 950)
         );
     }
 
 
 }
 
-class Trader {
-    private final String name;
-    private final String city;
 
-
-    Trader(String name, String city) {
-        this.name = name;
-        this.city = city;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    @Override
-    public String toString() {
-        return "Trader{" +
-                "name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                '}';
-    }
-}
-
-class Transaction {
-    private final Trader trader;
-    private final int year;
-    private final int value;
-
-    Transaction(Trader trader, int year, int value) {
-        this.trader = trader;
-        this.year = year;
-        this.value = value;
-    }
-
-    public Trader getTrader() {
-        return trader;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    @Override
-    public String toString() {
-        return "Transaction{" +
-                "trader=" + trader +
-                ", year=" + year +
-                ", value=" + value +
-                '}';
-    }
-}
