@@ -21,4 +21,14 @@ public class Dish {
     public void setCalories(double calories) {
         this.calories = calories;
     }
+
+    public CaloricLevel getCaloricLevel() {
+        if (getCalories() < 400) {
+            return CaloricLevel.LOW;
+        }
+        if (getCalories() > 400 && getCalories() < 800) {
+            return CaloricLevel.LOW;
+        }
+        return CaloricLevel.HIGH;
+    }
 }
