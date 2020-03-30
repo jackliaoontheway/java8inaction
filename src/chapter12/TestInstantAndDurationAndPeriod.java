@@ -1,6 +1,8 @@
 package chapter12;
 
 import java.time.*;
+import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
 
 public class TestInstantAndDurationAndPeriod {
 
@@ -22,6 +24,14 @@ public class TestInstantAndDurationAndPeriod {
         LocalDateTime  localDateTime1 = LocalDateTime.of(2020, 03, 30, 07, 50);
         Period period = Period.between(date,localDateTime1.toLocalDate());
         System.out.println(period.getDays());
+
+        Duration.ofMinutes(3);
+        Duration.of(3, ChronoUnit.MINUTES);
+
+        Period.ofDays(10);
+        Period.ofWeeks(3);
+        Period.of(2,6,1);
+
     }
 
     /**
